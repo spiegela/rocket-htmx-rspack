@@ -1,0 +1,23 @@
+{
+  "name": "rocket-htmx-rspack",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development rspack serve",
+    "build": "cross-env NODE_ENV=production rspack build"
+  },
+  "devDependencies": {
+    "@rspack/cli": "1.0.0-beta.1",
+    "@rspack/core": "1.0.0-beta.1",
+    "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.4.40",
+    "postcss-loader": "^8.1.1",
+    "tailwindcss": "^3.4.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "franken-ui": "^0.1.2"
+  }
+}

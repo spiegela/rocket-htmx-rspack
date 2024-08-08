@@ -1,0 +1,17 @@
+<div id="todos" hx-swap="beforeend">
+    <table class="uk-table uk-table-striped">
+        <thead>
+        <tr>
+            <th>Complete</th>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody id="todos-content">
+        {% for todo in todos %}
+            {% include "todo.html" %}
+        {% endfor %}
+        </tbody>
+    </table>
+</div>

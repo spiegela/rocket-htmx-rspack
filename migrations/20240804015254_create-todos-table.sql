@@ -1,0 +1,5 @@
+CREATE TABLE todos (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  description TEXT,
+  completed BOOLEAN DEFAULT FALSE
+);

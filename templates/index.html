@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="uk-h1 uk-margin-top uk-margin-left uk-margin-bottom">Rocket Todos</h1>
+<form id="add-form" class="uk-flex" hx-on::after-request="this.reset()">
+    <input required type=text
+           class="uk-input uk-margin-top uk-margin-bottom uk-margin-left"
+           placeholder="Your todo description..."
+           name="description">
+    <button class="uk-button uk-button-default uk-margin-left uk-margin-top uk-margin-bottom uk-margin-right"
+            hx-post="/todos"
+            hx-trigger="click"
+            hx-target="#todos-content"
+            hx-swap="beforeend">
+        Add
+    </button>
+</form>
+<div id="list" hx-get="/todos" hx-target="this" hx-trigger="load" hx-swap="outerHTML">
+    Loading...
+</div>
+{% endblock %}

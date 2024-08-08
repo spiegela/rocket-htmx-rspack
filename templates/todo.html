@@ -1,0 +1,27 @@
+<tr id="todo-{{ todo.id }}">
+    <td>
+        <input type="checkbox"
+               name="completed"
+               class="uk-checkbox uk-toggle-switch uk-toggle-switch-primary"
+               hx-put="/todos/{{ todo.id }}"
+               hx-target="#todo-{{ todo.id }}"
+               hx-swap="outerHTML"
+               {% if todo.completed %}checked{% endif %} >
+        </input>
+    </td>
+    <td> {{ todo.id }}</td>
+    <td id="todo-desc-{{ todo.id }}">
+        <span {% if todo.completed %} style="text-decoration: line-through" {% endif %}>
+            {{ todo.description }}
+        </span>
+    </td>
+    <td>
+        <button
+                hx-delete="/todos/{{todo.id}}"
+                hx-trigger="click"
+                hx-target="#todo-{{ todo.id }}"
+                hx-swap="delete">
+            Delete
+        </button>
+    </td>
+</tr>

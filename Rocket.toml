@@ -1,0 +1,2 @@
+[global.databases]
+sqlite_todos = { url = "todos.sqlite" }
